@@ -1,6 +1,12 @@
 US Ski and Snowboard Node.js Test
 ---------------------------------
 
+## Running the App
+
+```bach
+npm run dev
+```
+
 ## Data
 
 Data is stored in an SQLite database located in the data directory.  The database can be generated using the scirpt below.

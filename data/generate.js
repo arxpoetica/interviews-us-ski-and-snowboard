@@ -1,8 +1,11 @@
-const path = require('path');
-const faker = require('faker');
-const sqlite3 = require('sqlite3');
-const { open } = require('sqlite');
+import { fileURLToPath } from 'url';
+import path from 'path';
+import { faker } from '@faker-js/faker';
+import sqlite3 from 'sqlite3';
+import { open } from 'sqlite';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const NUMBER_OF_MEMBERS = 1000;
 
@@ -79,9 +82,9 @@ class Generate {
 				id: faker.datatype.uuid(),
 				firstName: faker.name.firstName(),
 				lastName: faker.name.lastName(),
-				title: faker.name.title(),
-				phone: faker.phone.phoneNumber(),
-				company: faker.company.companyName(),
+				title: faker.name.jobTitle(),
+				phone: faker.phone.number(),
+				company: faker.company.name(),
 				department: faker.commerce.department(),
 				url: faker.internet.url(),
 				image: faker.image.imageUrl()
