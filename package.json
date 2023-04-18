@@ -15,16 +15,19 @@
 	},
 	"dependencies": {
 		"koa": "2.14.2",
+		"koa-bodyparser": "4.4.0",
 		"koa-router": "12.0.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"sqlite": "4.1.2",
-		"sqlite3": "5.1.6"
+		"sqlite3": "5.1.6",
+		"styled-components": "5.3.9"
 	},
 	"devDependencies": {
 		"@faker-js/faker": "7.6.0",
 		"@types/react": "18.0.37",
 		"@types/react-dom": "18.0.11",
+		"@types/styled-components": "5.1.26",
 		"@vitejs/plugin-react": "3.1.0",
 		"concurrently": "8.0.1",
 		"nodemon": "2.0.22",

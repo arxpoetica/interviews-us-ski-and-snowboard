@@ -1,13 +1,7 @@
-import { useState } from 'react'
+import { Table } from './components/Table'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      ...to come...
-    </div>
-  )
-}
-
-export default App
+export const App = () => <>
+	<img src="/images/logo.png" alt="U.S. Ski and Snowboard Coding Test" />
+	<h1>U.S. Ski and Snowboard Coding Test</h1>
+	<Table />
+</>
