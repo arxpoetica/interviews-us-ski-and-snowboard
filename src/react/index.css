@@ -1,6 +1,8 @@
 :root {
 	--bg-color: #7b86a1;
-	--white: #eee;
+	--black: #000000;
+	--white: #ffffff;
+	--off-white: #f6f6f6;
 
 	--font-family: "Mulish", sans-serif;
 }
@@ -29,4 +31,10 @@ a:hover {
 h1 {
 	margin: 0 0 20rem;
 	font: 35rem/1.15 var(--font-family);
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 20rem;
+	}
 }

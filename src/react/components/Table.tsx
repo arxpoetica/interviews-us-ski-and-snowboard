@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { Row } from './Row'
 import styled from 'styled-components'
 
 const TableContainer = styled.div`
-	display: grid;
-	gap: 20rem;
-`
-const Row = styled.div`
+	margin: 0 auto;
+	max-width: 1000rem;
 `
 
 export const Table = () => {
@@ -23,15 +22,10 @@ export const Table = () => {
 			.then(entries => setEntries(entries))
 	}, [])
 
-
 	return (
-		<TableContainer>
+		<TableContainer className="table">
 			{/* <div>{JSON.stringify(entries[0])}</div> */}
-			{entries.map(entry => (
-				<Row key={entry.id}>
-					{entry.lastName}, {entry.firstName}
-				</Row>
-			))}
+			{entries.map(entry => <Row key={entry.id} entry={entry} />)}
 		</TableContainer>
 	)
 }
