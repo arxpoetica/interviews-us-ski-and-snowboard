@@ -1,4 +1,4 @@
-import { TYPES } from './constants'
+import { TYPES } from './helpers'
 import styled from 'styled-components'
 
 const Title = styled.h2`

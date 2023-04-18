@@ -48,7 +48,9 @@ const Image = styled.img`
 
 export const Row = ({ entry }) => {
 	const name = `${entry.firstName} ${entry.lastName}`
-	const address = `${entry.address}<br/>${entry.city}, ${entry.state} ${entry.zip}`
+	const address = entry.address_id
+		? `${entry.address}<br/>${entry.city}, ${entry.state} ${entry.zip}`
+		: false
 
 	return <RowContainer className="row">
 		<HeadersGroup>
@@ -60,7 +62,7 @@ export const Row = ({ entry }) => {
 			</Headers>
 			<Headers className="headers">
 				<Header title="Phone" detail={entry.phone} />
-				<Header title="Address" detail={address} type="address" />
+				{address && <Header title="Address" detail={address} type="address" />}
 				<Header title="Website" detail={entry.url} type="url" />
 			</Headers>
 		</HeadersGroup>
