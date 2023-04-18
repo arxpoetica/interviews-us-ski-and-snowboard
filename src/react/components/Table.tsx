@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Row } from './Row'
 import styled from 'styled-components'
 
@@ -24,7 +24,6 @@ export const Table = () => {
 
 	return (
 		<TableContainer className="table">
-			{/* <div>{JSON.stringify(entries[0])}</div> */}
 			{entries.map(entry => <Row key={entry.id} entry={entry} />)}
 		</TableContainer>
 	)
